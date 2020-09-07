@@ -1,0 +1,5 @@
+src/
+.eslintignore
+.eslintrc
+.prettierrc
+tsconfig.json

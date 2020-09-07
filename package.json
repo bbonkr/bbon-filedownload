@@ -1,39 +1,41 @@
 {
-  "name": "@bbon/filedownload",
-  "version": "1.0.0",
-  "description": "File download request",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bbonkr/bbon-filedownload.git"
-  },
-  "homepage": "https://github.com/bbonkr/bbon-filedownload",
-  "bugs": {
-    "url": "https://github.com/bbonkr/bbon-filedownload/issues"
-  },
-  "keywords": [
-    "javascript",
-    "js",
-    "download",
-    "typescript"
-  ],
-  "author": "Pon Cheol Ku <dev@bbon.kr> (http://bbon.kr)",
-  "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "@types/jest": "^26.0.13",
-    "@types/node": "^14.6.4",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
-    "eslint": "^7.8.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.4.2",
-    "prettier": "^2.1.1",
-    "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2"
-  }
+    "name": "@bbon/filedownload",
+    "version": "1.0.0",
+    "description": "File download request",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bbonkr/bbon-filedownload.git"
+    },
+    "homepage": "https://github.com/bbonkr/bbon-filedownload",
+    "bugs": {
+        "url": "https://github.com/bbonkr/bbon-filedownload/issues"
+    },
+    "keywords": [
+        "javascript",
+        "js",
+        "download",
+        "typescript"
+    ],
+    "author": "Pon Cheol Ku <dev@bbon.kr> (http://bbon.kr)",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint ./src/**/*.ts",
+        "lint:fix": "eslint ./src/**/*.ts --fix"
+    },
+    "devDependencies": {
+        "@types/node": "^14.6.4",
+        "@typescript-eslint/eslint-plugin": "^4.0.1",
+        "@typescript-eslint/parser": "^4.0.1",
+        "eslint": "^7.8.1",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "http-server": "^0.12.3",
+        "prettier": "^2.1.1",
+        "typescript": "^4.0.2"
+    },
+    "dependencies": {}
 }
