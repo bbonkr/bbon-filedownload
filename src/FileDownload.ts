@@ -52,6 +52,7 @@ export class FileDownloadHelper {
             tempLink.style.display = 'none';
             tempLink.href = blobURL;
             tempLink.setAttribute('download', filename);
+            tempLink.setAttribute('target', '_self'); // fix: WebKitBlobResource error 1
 
             if (typeof tempLink.download === 'undefined') {
                 tempLink.setAttribute('target', '_blank');
