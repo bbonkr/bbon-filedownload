@@ -1,5 +1,8 @@
+.github/
 src/
+.babelrc
 .eslintignore
 .eslintrc
 .prettierrc
 tsconfig.json
+webpack.config.js
