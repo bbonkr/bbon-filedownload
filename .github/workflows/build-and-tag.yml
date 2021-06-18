@@ -31,7 +31,7 @@ jobs:
 
       - name: get version
         id: get_package_version
-        run: echo "::set-output name=version::$(node -p -e "require('./package.json').version")
+        run: echo "::set-output name=version::$(node -p -e "require('./package.json').version")"
       - name: set version 
         run: echo "PACKAGE_VERSION=${{ steps.get_package_version.outputs.version }}" >> $GITHUB_ENV 
 
