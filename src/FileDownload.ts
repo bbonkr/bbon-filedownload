@@ -1,6 +1,6 @@
 const DEFAULT_MIMETYPE = 'application/octet-stream';
 
-interface DownLoadOptions {
+type DownLoadOptions = {
     /**
      * data
      */
@@ -15,11 +15,11 @@ interface DownLoadOptions {
      * default: application/octet-stream
      */
     contentType?: string;
-}
+};
 
-interface DownloadFileOptions extends DownLoadOptions {
+type DownloadFileOptions = DownLoadOptions & {
     bom?: string;
-}
+};
 
 export class FileDownloadHelper {
     public download(options: DownLoadOptions): void {

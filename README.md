@@ -1,5 +1,7 @@
 # @bbon/Filedownload
 
+[![](https://shields.io/npm/v/@bbon/filedownload)](https://www.npmjs.com/package/@bbon/filedownload) [![](https://shields.io/npm/dt/@bbon/filedownload)](https://www.npmjs.com/package/@bbon/filedownload) [![Build and tag](https://github.com/bbonkr/bbon-filedownload/actions/workflows/build-and-tag.yml/badge.svg)](https://github.com/bbonkr/bbon-filedownload/actions/workflows/build-and-tag.yml) [![publish NPM](https://github.com/bbonkr/bbon-filedownload/actions/workflows/publish-npm.yml/badge.svg)](https://github.com/bbonkr/bbon-filedownload/actions/workflows/publish-npm.yml)
+
 파일 다운로드 코드 조각입니다.
 
 ## 설치 Installation
