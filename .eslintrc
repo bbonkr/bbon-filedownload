@@ -3,9 +3,7 @@
     "plugins": ["@typescript-eslint"],
     "extends": [
         "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended"
+        "prettier"
     ],
     "parserOptions": {
         "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
