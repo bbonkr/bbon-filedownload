@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const webpack = require('webpack');
 const path = require('path');
 
@@ -40,5 +41,9 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.join(__dirname, 'dist'),
+        library: {
+            name: '@bbon/filedownload',
+            type: 'umd',
+        },
     },
 };
