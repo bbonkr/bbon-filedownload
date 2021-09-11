@@ -1,6 +1,6 @@
-const DEFAULT_MIMETYPE = 'application/octet-stream';
+export const DEFAULT_MIMETYPE = 'application/octet-stream';
 
-type DownLoadOptions = {
+export type DownloadOptions = {
     /**
      * data
      */
@@ -17,12 +17,12 @@ type DownLoadOptions = {
     contentType?: string;
 };
 
-type DownloadFileOptions = DownLoadOptions & {
+export type DownloadFileOptions = DownloadOptions & {
     bom?: string;
 };
 
-export class FileDownloadHelper {
-    public download(options: DownLoadOptions): void {
+class FileDownloadHelper {
+    public download(options: DownloadOptions): void {
         if (typeof window === 'object') {
             const { data, contentType, filename } = options;
             const contentTypeValue = contentType || 'application/octet-stream';
@@ -44,8 +44,10 @@ export class FileDownloadHelper {
             type: mime || DEFAULT_MIMETYPE,
         });
 
-        if (typeof window.navigator.msSaveBlob !== 'undefined') {
-            window.navigator.msSaveBlob(blob, filename);
+        const navigatorDelegate: any = window.navigator;
+
+        if (typeof navigatorDelegate.msSaveBlob !== 'undefined') {
+            navigatorDelegate.msSaveBlob(blob, filename);
         } else {
             const blobURL = window.URL.createObjectURL(blob);
             const tempLink = document.createElement('a');
@@ -68,3 +70,5 @@ export class FileDownloadHelper {
         }
     }
 }
+
+export default FileDownloadHelper;

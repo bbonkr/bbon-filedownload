@@ -1,16 +1,43 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
-    "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
-        "sourceType": "module" // Allows for the use of imports
+    "env": {
+        "commonjs": true,
+        "node": true,
+        "browser": true,
+        "es6": true,
+        "jest": true
     },
-    "rules": {
-        "no-console": "warn",
-        "@typescript-eslint/no-var-requires":"off"
-    }
+    "extends": [
+        "eslint:recommended",
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "babel-eslint",
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "env": {
+                "browser": true
+            },
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "ecmaVersion": 12,
+                "sourceType": "module"
+            },
+            "extends": ["plugin:@typescript-eslint/recommended"],
+            "plugins": ["@typescript-eslint"],
+            "rules": {
+                "react/prop-types": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-unused-vars": [
+                    "error",
+                    {
+                        "varsIgnorePattern": "^_",
+                        "args": "none"
+                    }
+                ],
+                "no-constant-condition": "off",
+                "@typescript-eslint/no-explicit-any": "off"
+            }
+        }
+    ]
 }
