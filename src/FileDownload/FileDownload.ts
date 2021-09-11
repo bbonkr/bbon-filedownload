@@ -2,17 +2,24 @@ export const DEFAULT_MIMETYPE = 'application/octet-stream';
 
 export type DownloadOptions = {
     /**
-     * data
+     * Data to download
+     *
+     * @type {(string | ArrayBuffer | ArrayBufferView | Blob)}
      */
     data: string | ArrayBuffer | ArrayBufferView | Blob;
     /**
-     * file name
+     * File name
+     *
+     * @type {string}
      */
     filename: string;
+
     /**
      * response.headers['content-type']
      *
      * default: application/octet-stream
+     *
+     * @type {string}
      */
     contentType?: string;
 };
@@ -22,6 +29,12 @@ export type DownloadFileOptions = DownloadOptions & {
 };
 
 class FileDownloadHelper {
+    /**
+     * File download
+     *
+     * @param {DownloadOptions} options
+     * @memberof FileDownloadHelper
+     */
     public download(options: DownloadOptions): void {
         if (typeof window === 'object') {
             const { data, contentType, filename } = options;
