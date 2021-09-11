@@ -2,8 +2,8 @@ name: publish gh-pages
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main # Default release branch
 
 jobs:
   deploy:
