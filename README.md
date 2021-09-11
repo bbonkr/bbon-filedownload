@@ -21,6 +21,9 @@ $ yarn add @bbon/filedownload
 > responseType 을 'blob' 으로 설정해야 합니다.
 
 ```typescript
+import Axios from 'axios'
+import FileDownloadHelper from '@bbon/filedownload'
+
 const requestConfig: AxiosRequestConfig = {
     ...Axios.defaults,
     responseType: 'blob',
@@ -47,4 +50,4 @@ Axios.get(fileDownloadUrl, requestConfig)
     });
 ```
 
-전체코드는 [GitHub: bbon-filedownload-sample 저장소](https://github.com/bbonkr/bbon-filedownload-sample)에서 확인하실 수 있습니다.
+사용예는 [example](https://github.com/bbonkr/bbon-filedownload/example)에서 확인하실 수 있습니다.
